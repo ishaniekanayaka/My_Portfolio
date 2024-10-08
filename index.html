@@ -7,76 +7,72 @@
     <meta name="author" content="Ishani Ekanayaka">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="Assests/images/logo2.png">
-
+    <link rel="stylesheet" href="Style/StyleSheet.css">
+    <link rel="stylesheet" href="Style/normalize.css">
     <title>Ishani Ekanayaka</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+
 </head>
 <body>
-    <header>
-        <nav>
-            <div>
-                <h3><em>ISHA</em></h3>
-            </div>
-            <div>
-                <IMG src="Assests/images/Heart%20(1).png" width="50">
-            </div>
 
-            <div>
-                <!--Menu-->
-                <ul>
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                       <a href="about.html">About</a>
-                    </li>
-                    <li>
-                        <a href="service.html">Service</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+<nav class="navbar">
+    <div class="logo">I<span>SHA</span></div>
 
-    <main>
-        <section>
-            <!--Front Image, Icon & Button-->
-            <div>
-                <img src="Assests/images/dp.png" alt="Profile photo">
-            </div>
-        </section>
-        -<section>
-            <div>
-                <h6>HELLO...</h6>
-                <h1>I'M ISHANI EKANAYAKE</h1>
-                <h1>WEB DESIGNER</h1>
-                <p>A passionate web developer with a knack for turning ideas into
-                    interactive, engaging web experiences. With a blend of creativity
-                    and technical expertise, I specialize in crafting websites that
-                    not only look stunning but also perform seamlessly.</p>
-            </div>
-            <div>
-                <a href="about.html"><button>MORE ABOUT ME</button></a>
-            </div>
-        </section>
-        <section>
-            <div>
-                <div>
-                    <a href="https://www.facebook.com/ishani.Ekanayaka/" target="_blank"><img src="Assests/images/Facebook%20(1).png" title="FaceBook" alt="FB logo"></a>
-                </div>
-                <div>
-                    <a href="https://www.linkedin.com/in/ishani-ekanayaka-78b6312b7/" target="_blank"><img src="Assests/images/LinkedIn%20(1).png" title="Linkedin" alt="Linkedin logo"></a>
-                </div>
-                <div>
-                    <a href="https://github.com/ishaniekanayaka" target="_blank"><img src="Assests/images/GitHub%20(1).png" title="Github" alt="Github logo"></a>
-                </div>
-                <div>
-                    <a href="https://wa.me/0720106953" target="_blank"><img src="Assests/images/WhatsApp%20(1).png" title="Whatsap" alt="whatsap logo"></a>
-                </div>
-            </div>
-        </section>
-    </main>
+    <!-- Hidden Checkbox for Menu Toggle -->
+    <input type="checkbox" id="menuToggle">
+
+    <!-- Hamburger icon -->
+    <label for="menuToggle" class="hamburger">&#9776;</label>
+
+    <!-- Navigation Links -->
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About/about.html">About</a></li>
+        <li><a href="Service/service.html">Service</a></li>
+        <li><a href="Contact/contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- Content section -->
+<div class="container"  >
+
+    <div class="image-container">
+        <div class="image-frame">
+            <img src="Assests/images/dp.png" alt="Portrait" class="image">
+        </div>
+        <div class="corner-top-left"></div>
+        <div class="corner-bottom-right"></div>
+    </div>
+
+
+    <div class="info-section">
+        <h1>Hello...</h1>
+        <h2>I'M<span>ISHANI EKANAYAKE</span> </h2>
+        <h3 class="animate__animated animate__bounce">WEB DESIGNER</h3>
+        <p>A passionate web developer with a knack for turning ideas into
+            interactive, engaging web experiences. With a blend of creativity
+            and technical expertise, I specialize in crafting websites that
+            not only look stunning but also perform seamlessly.</p>
+        <a href="About/about.html"><button class="cta-button"  id="shiny-cta">More About Me</button></a>
+    </div>
+
+    <div class="social-section">
+        <a href=""><img src="Assests/images/white-instagram.png" alt="Instagram"></a>
+        <a href="https://www.facebook.com/ishani.Ekanayaka/"><img src="Assests/images/white-facebook.png" alt="Facebook"></a>
+        <a href="https://github.com/ishaniekanayaka"><img src="Assests/images/white-github-50.png" alt="GitHub"></a>
+        <a href="https://www.linkedin.com/in/ishani-ekanayaka-78b6312b7/"><img src="Assests/images/white-linkedin-50.png" alt="LinkedIn"></a>
+        <a href="https://wa.me/0720106953"><img src="Assests/images/white%20whtasp.png" alt="WhatsApp"></a>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>

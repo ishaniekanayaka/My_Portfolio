@@ -1,0 +1,770 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: #fff;
+    height: 730px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 20px 20px;
+}
+
+
+.logo {
+    color: white;
+    font-size: 24px ;
+    font-weight: bold;
+    margin-left: 40px;
+}
+
+.logo span{
+    color: goldenrod;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Navbar Links */
+.nav-links {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Hamburger Menu (hidden by default) */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+
+
+
+/* Checkbox trick for toggling menu */
+#menuToggle {
+    display: none;
+}
+
+/* When the checkbox is checked, the nav-links become visible */
+#menuToggle:checked ~ .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #333;
+}
+
+#menuToggle:checked ~ .nav-links li {
+    margin: 10px 0;
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        width: 100%;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+/* Content section */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    max-width: 1440px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.image-section img {
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    /*margin-top: 6vh;*/
+    border: 3px solid whitesmoke;
+}
+
+.info-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.info-section h1, .info-section h2, .info-section h3 {
+    margin: 10px 0;
+}
+
+.info-section p{
+    /*margin-top: 5px;*/
+    font-size: 0.7rem;
+    color: white;
+    justify-content: center;
+    margin-left: 35px;
+    margin-right: 35px;
+}
+
+
+/* Responsive Styles with Media Queries */
+@media (min-width: 320px) and (max-width: 374px) {
+    .info-section h2 { font-size: 1.5rem;
+        color: white;
+    }
+    .info-section h2 span{
+        color: #ff9900;
+        margin-left: 10px;
+    }
+    .info-section h3 { font-size: 1rem; }
+    .social-section a img { width: 25px; height: auto; }
+    .info-section .cta-button {
+        padding: 8px 16px;
+        margin-top: 40px;
+        background-color: black;
+        border: 1px solid goldenrod;
+        border-radius: 15px;
+        cursor: pointer;
+        color: goldenrod;
+        font-weight: bold;
+        font-size: 6px;
+        transition: background-color 0.5s ease;
+        text-align: center;
+    }
+
+    .info-section .cta-button:hover{
+        background-color: goldenrod;
+        color: black;
+        border: 3px solid white;
+    }
+
+    .info-section p{
+        /*margin-top: 5px;*/
+        font-size: 0.7rem;
+        color: white;
+        justify-content: center;
+        margin-left: 35px;
+        margin-right: 35px;
+    }
+
+    .image-container {
+        position: relative;
+        width: 200px;
+        height: 300px;
+        /*margin-left: 60px;
+        margin-top: 70px;*/
+        margin-top: 50px;
+    }
+    .image-frame {
+        position: absolute;
+        top: 0;
+        left: 0;
+        /*margin-left: 80px;
+        margin-top: 70px;*/
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    }
+    .image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .corner-top-left, .corner-bottom-right {
+        position: absolute;
+        width: 40px;
+        height: 50px;
+        border: 5px solid #ffa500;
+        border-radius: 20%;
+    }
+    .corner-top-left {
+        top: -20px;
+        left: -20px;
+        border-right: none;
+        border-bottom: none;
+    }
+    .corner-bottom-right {
+        bottom: -20px;
+        right: -20px;
+        border-left: none;
+        border-top: none;
+    }
+
+}
+
+@media (min-width: 375px) and (max-width: 424px) {
+    .info-section h2 { font-size: 1.7rem;
+        color: white;
+    }
+    .info-section h2 span{
+        color: #ff9900;
+        margin-left: 10px;
+    }
+    .info-section h3 { font-size: 1.2rem;
+        color: white;
+    }
+    .social-section a img { width: 28px; height: auto; }
+
+    .info-section .cta-button {
+        padding: 8px 16px;
+        margin-top: 40px;
+        background-color: black;
+        border: 1px solid goldenrod;
+        border-radius: 15px;
+        cursor: pointer;
+        color: goldenrod;
+        font-weight: bold;
+        font-size: 7px;
+        transition: background-color 0.5s ease;
+        text-align: center;
+    }
+
+    .info-section .cta-button:hover{
+        background-color: goldenrod;
+        color: black;
+        border: 3px solid white;
+    }
+
+    .info-section p{
+        /*margin-top: 5px;*/
+        font-size: 0.7rem;
+        color: white;
+        justify-content: center;
+        margin-left: 35px;
+        margin-right: 35px;
+    }
+
+    .image-container {
+        position: relative;
+        width: 200px;
+        height: 300px;
+        /*margin-left: 60px;*/
+        /*margin-top: 70px;*/
+    }
+    .image-frame {
+        position: absolute;
+        top: 0;
+        left: 0;
+        /*margin-left: 80px;
+        margin-top: 70px;*/
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    }
+    .image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .corner-top-left, .corner-bottom-right {
+        position: absolute;
+        width: 40px;
+        height: 50px;
+        border: 5px solid #ffa500;
+        border-radius: 20%;
+    }
+    .corner-top-left {
+        top: -20px;
+        left: -20px;
+        border-right: none;
+        border-bottom: none;
+    }
+    .corner-bottom-right {
+        bottom: -20px;
+        right: -20px;
+        border-left: none;
+        border-top: none;
+    }
+
+}
+
+@media (min-width: 425px) and (max-width: 767px) {
+    .info-section h2 { font-size: 2rem;
+        color: white;
+    }
+    .info-section h2 span{
+        color: #ff9900;
+        margin-left: 10px;
+
+    }
+    .info-section h3 { font-size: 1.4rem;
+        color: white;
+    }
+
+    .social-section a img { width: 30px; height: auto; }
+
+    .info-section .cta-button {
+        padding: 8px 16px;
+        margin-top: 40px;
+        background-color: black;
+        border: 1px solid goldenrod;
+        border-radius: 15px;
+        cursor: pointer;
+        color: goldenrod;
+        font-weight: bold;
+        font-size: 8px;
+        transition: background-color 0.5s ease;
+        text-align: center;
+    }
+
+    .info-section .cta-button:hover{
+        background-color: goldenrod;
+        color: black;
+        border: 3px solid white;
+    }
+
+    .info-section p{
+        /*margin-top: 5px;*/
+        font-size: 0.8rem;
+        color: white;
+        justify-content: center;
+        margin-left: 35px;
+        margin-right: 35px;
+    }
+
+    .image-container {
+        position: relative;
+        width: 200px;
+        height: 300px;
+        /* margin-left: 60px;
+         margin-top: 70px;*/
+    }
+    .image-frame {
+        position: absolute;
+        top: 0;
+        left: 0;
+        /*margin-left: 80px;
+        margin-top: 70px;*/
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    }
+    .image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .corner-top-left, .corner-bottom-right {
+        position: absolute;
+        width: 50px;
+        height: 60px;
+        border: 5px solid #ffa500;
+        border-radius: 20%;
+    }
+    .corner-top-left {
+        top: -20px;
+        left: -20px;
+        border-right: none;
+        border-bottom: none;
+    }
+    .corner-bottom-right {
+        bottom: -20px;
+        right: -20px;
+        border-left: none;
+        border-top: none;
+    }
+
+
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .info-section h2 { font-size: 2rem;
+        color: white;
+    }
+    .info-section h2 span{
+        color: #ff9900;
+
+    }
+    .info-section h3 { font-size: 1.4rem;
+        color: white;
+    }
+
+    .image-container {
+        position: relative;
+        width: 250px;
+        height: 350px;
+        /*margin-left: 60px;
+        margin-top: 70px;*/
+    }
+    .image-frame {
+        position: absolute;
+        top: 0;
+        left: 0;
+        /*margin-left: 80px;
+        margin-top: 70px;*/
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    }
+    .image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .corner-top-left, .corner-bottom-right {
+        position: absolute;
+        width: 50px;
+        height: 70px;
+        border: 5px solid #ffa500;
+        border-radius: 20%;
+    }
+    .corner-top-left {
+        top: -20px;
+        left: -20px;
+        border-right: none;
+        border-bottom: none;
+    }
+    .corner-bottom-right {
+        bottom: -20px;
+        right: -20px;
+        border-left: none;
+        border-top: none;
+    }
+
+
+    .social-section a img { width: 30px; height: auto; }
+
+    .info-section .cta-button {
+        padding: 8px 16px;
+        margin-top: 40px;
+        background-color: black;
+        border: 1px solid goldenrod;
+        border-radius: 15px;
+        cursor: pointer;
+        color: goldenrod;
+        font-weight: bold;
+        font-size: 8px;
+        transition: background-color 0.5s ease;
+        text-align: center;
+    }
+
+    .info-section .cta-button:hover{
+        background-color: goldenrod;
+        color: black;
+        border: 3px solid white;
+    }
+
+    .info-section p{
+        margin-top: 45px;
+        font-size: 0.8rem;
+        color: white;
+        justify-content: center;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+    .container { flex-direction: row; }
+
+    .image-container {
+        position: relative;
+        width: 300px;
+        height: 400px;
+        margin-left: 50px;
+        margin-top: 70px;
+    }
+    .image-frame {
+        position: absolute;
+        top: 0;
+        left: 0;
+        /*margin-left: 80px;
+        margin-top: 70px;*/
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    }
+    .image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .corner-top-left, .corner-bottom-right {
+        position: absolute;
+        width: 60px;
+        height: 80px;
+        border: 10px solid #ffa500;
+        border-radius: 20%;
+    }
+    .corner-top-left {
+        top: -20px;
+        left: -20px;
+        border-right: none;
+        border-bottom: none;
+    }
+    .corner-bottom-right {
+        bottom: -20px;
+        right: -20px;
+        border-left: none;
+        border-top: none;
+    }
+
+    .social-section {
+        display: flex;
+        flex-direction: column;
+        margin: 140px 50px auto 30px;
+        gap: 10px;
+    }
+
+    .social-section a img {
+        width: 45px;
+        height: auto;
+        transition: background 0.5s ease;
+    }
+
+    .info-section { flex: 2;
+        margin-top: 90px;
+        margin-left: 40px;
+    }
+    .info-section h1{
+        font-size: 1.0rem;
+        font-weight: 600;
+        color: white;
+        text-align: left;
+        margin-left: 35px;
+    }
+
+
+
+    .info-section h2 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: white;
+        margin-left: 35px;
+        justify-content: center;
+    }
+    .info-section h2 span{
+        color: #ff9900;
+        margin-left: 10px;
+        /*justify-content: center;*/
+    }
+    .info-section h3 {
+        font-size: 2.0rem;
+        font-weight: 600;
+        color: white;
+    }
+    .info-section p{
+        margin-top: 45px;
+        font-size: 1.0rem;
+        color: white;
+        justify-content: center;
+        margin-left: 35px;
+        margin-right: 35px;
+    }
+
+    .info-section .cta-button {
+        padding: 8px 16px;
+        margin-top: 70px;
+        background-color: black;
+        border: 1px solid goldenrod;
+        border-radius: 15px;
+        cursor: pointer;
+        color: goldenrod;
+        font-weight: bold;
+        font-size: 18px;
+        transition: background-color 0.5s ease;
+        text-align: center;
+    }
+
+    .info-section .cta-button:hover{
+        background-color: goldenrod;
+        color: black;
+        border: 3px solid white;
+    }
+
+}
+
+
+@media (min-width: 1440px) {
+    .container {
+        flex-direction: row;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /*.image-section {
+        flex: 1;
+        max-width: 800px;
+        height: auto;
+        margin-left: 90px;
+        margin-top: 100px;
+    }*/
+
+    .image-container {
+        position: relative;
+        width: 300px;
+        height: 400px;
+        margin-left: 90px;
+        margin-top: 100px;
+    }
+
+    .image-frame {
+        position: absolute;
+        top: 0;
+        left: 0;
+        /*margin-left: 80px;
+        margin-top: 70px;*/
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    }
+    .image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .corner-top-left, .corner-bottom-right {
+        position: absolute;
+        width: 70px;
+        height: 100px;
+        border: 7px solid #ffa500;
+        border-radius: 20px;
+    }
+    .corner-top-left {
+        top: -20px;
+        left: -20px;
+        border-right: none;
+        border-bottom: none;
+    }
+    .corner-bottom-right {
+        bottom: -20px;
+        right: -20px;
+        border-left: none;
+        border-top: none;
+    }
+
+    .social-section {
+        display: flex;
+        flex-direction: column;
+        margin: 190px auto auto 100px;
+        gap: 13px;
+
+    }
+
+    .social-section a img {
+        width: 35px;
+        height: auto;
+
+    }
+
+    .info-section {
+        flex: 2;
+        margin-top: 100px;
+        margin-left: 50px;
+    }
+
+    .info-section h1 {
+        font-size: 1.0rem;
+        font-weight: 600;
+        color: white;
+        text-align: left;
+        margin-left: 35px;
+    }
+
+    .info-section h2 {
+        font-size: 3.0rem;
+        font-weight: 600;
+        color: white;
+        margin-left: 35px;
+    }
+
+    .info-section h2 span {
+        color: #ff9900;
+        margin-left: 10px;
+    }
+
+    .info-section h3 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: white;
+    }
+
+    .info-section p {
+        margin-top: 45px;
+        font-size: 1.0rem;
+        color: white;
+        text-align: left;
+        margin-left: 35px;
+    }
+
+    .info-section .cta-button {
+        padding: 8px 16px;
+        margin-top: 70px;
+        background-color: black;
+        border: 1px solid goldenrod;
+        border-radius: 15px;
+        cursor: pointer;
+        color: goldenrod;
+        font-weight: bold;
+        font-size: 18px;
+        transition: background-color 0.5s ease;
+        text-align: center;
+    }
+
+    .info-section .cta-button:hover {
+        background-color: goldenrod;
+        color: black;
+        border: 3px solid white;
+    }
+}
+
+
+/* Mobile navbar */
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        background-color: #222;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
